@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@libsql/client": "^0.15.9",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
     "dotenv": "^17.2.0",
     "firebase": "^11.0.0",
     "framer-motion": "^12.23.5",
@@ -19,8 +23,22 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.9",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "typescript": "^5.8.3"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lohith114/stu_reg_admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lohith114/stu_reg_admin/issues"
+  },
+  "homepage": "https://github.com/lohith114/stu_reg_admin#readme"
 }
