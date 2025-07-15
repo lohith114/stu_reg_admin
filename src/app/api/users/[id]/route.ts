@@ -1,10 +1,11 @@
-// File: src/app/api/users/[id]/route.ts
-
 import { turso } from '@/lib/turso';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
-  const id = params?.id;
+export async function PUT(
+  request: NextRequest,
+  context: { params: { id: string } }
+) {
+  const id = context.params.id;
 
   if (!id) {
     return NextResponse.json({ error: 'User ID is required' }, { status: 400 });
