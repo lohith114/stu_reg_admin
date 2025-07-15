@@ -1,11 +1,17 @@
 import { turso } from '@/lib/turso';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export async function PUT(
-  request: NextRequest,
-  context: { params: { id: string } }
+  request: Request,
+  context: unknown
 ) {
-  const id = context.params.id;
+  let id: string | undefined;
+  if (typeof context === 'object' && context && 'params' in context) {
+    const params = (context as any).params;
+    if (params && typeof params.id === 'string') {
+      id = params.id;
+    }
+  }
 
   if (!id) {
     return NextResponse.json({ error: 'User ID is required' }, { status: 400 });
